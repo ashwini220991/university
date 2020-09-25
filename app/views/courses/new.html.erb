@@ -1,1 +1,39 @@
-<h1> This is the new course page</h1>
+<div class="container">
+  <div class="row sign-up-form">
+     <div class="col s12 m12 l12">
+     	<div class="card-panel">
+     	<h3 class="header">Add new course</h3>
+		<div class="row">
+			<%= form_for(:course, html: {class: "col s12"}) do |f| %>
+			  <div class="row">
+			  	<div class="input_field col s12">
+			  	  <%= f.text_field :short_name, placeholder:"Enter course short name", autofocus: true %>
+			 	  <%= f.label :short_name, class: "active" %>
+			 	</div>
+			  </div>
+
+			  <div class="row">
+			  	<div class="input_field col s12">
+			  	  <%= f.text_field :name, placeholder:"Enter course name" %>
+			  	  <%= f.label :name, class: "active" %>
+			  	</div>
+			  </div>
+
+			  <div class="row">
+			  	<div class="input_field col s12">
+			  	  <%= f.text_field :description, placeholder:"Enter description of course" %>
+			  	  <%= f.label :description, class: "active" %>
+			  	</div>
+			  </div>
+
+			  <div class="row">
+			  	<div class="input_field col s12">
+			      <%= f.button "Add", class: "btn orange waves-effect waves-light right" %>
+			    </div>
+			  </div>
+		     <% end %>
+		</div>
+	  </div>
+    </div>
+  </div>
+</div>

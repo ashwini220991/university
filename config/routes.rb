@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'students/index'
-
-  get 'about', to: 'pages#about'
-  get 'courses/new', to: 'courses#new'
   root 'courses#index'
+  get 'courses', to: 'courses#new'
+  post 'courses', to: 'courses#create'
+  get 'about', to: 'pages#about'
   resources :students, except: [:destroy]
   get 'login', to: 'logins#new'
   post 'login', to: 'logins#create'
